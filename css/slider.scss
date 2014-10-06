@@ -1,0 +1,65 @@
+
+
+.bg-slider {
+
+  $transition-duration: 3s;
+
+  margin: 0;
+  padding: 0;
+
+  position: relative;
+  z-index: -1000;
+
+  > * {
+    width: 100%;
+
+    background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    -webkit-transition: all $transition-duration;
+    transition: all $transition-duration;
+
+    &.active {
+      opacity: 1;
+    }
+
+    &.hidden {
+      opacity: 0;
+    }
+  }
+  #element-1 {
+    background-image: url('../img/otus_1920w.jpg');
+    background-image: -webkit-image-set(
+      url('../img/otus_1920w.jpg') 1x,
+      url('../img/otus_3840w.jpg') 2x
+    );
+  }
+  #element-2 {
+    background-image: url('../img/soup_1920w.jpg');
+    background-image: -webkit-image-set(
+      url('../img/soup_1920w.jpg') 1x,
+      url('../img/soup_3840w.jpg') 2x
+    );
+  }
+  #element-3 {
+    background-image: url('../img/zaki_1920w.jpg');
+    background-image: -webkit-image-set(
+      url('../img/zaki_1920w.jpg') 1x,
+      url('../img/zaki_3840w.jpg') 2x
+    );
+  }
+  li {
+    list-style-type: none;
+  }
+
+}
+
+
