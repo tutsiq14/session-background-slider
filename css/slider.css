@@ -16,9 +16,9 @@
     left: 0;
     -webkit-transition: all 3s;
     transition: all 3s; }
-    .bg-slider > *.active {
+    .bg-slider > *.slide-active {
       opacity: 1; }
-    .bg-slider > *.hidden {
+    .bg-slider > *.slide-hidden {
       opacity: 0; }
   .bg-slider #element-1 {
     background-image: url("../img/otus_1920w.jpg");

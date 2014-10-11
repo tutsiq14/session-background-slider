@@ -27,11 +27,11 @@
     -webkit-transition: all $transition-duration;
     transition: all $transition-duration;
 
-    &.active {
+    &.slide-active {
       opacity: 1;
     }
 
-    &.hidden {
+    &.slide-hidden {
       opacity: 0;
     }
   }

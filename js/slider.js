@@ -14,20 +14,19 @@ var bgSlider = (function(){
     sessionStorage.currentSlide = 0;
   }
 
-  $(document).ready(function(){
-    $(".bg-slider > *").height($(window).height());
-    slideCount = $(".bg-slider li").length;
+  jQuery(document).ready(function(){
+    jQuery(".bg-slider > *").height(jQuery(window).height());
+    slideCount = jQuery(".bg-slider li").length;
 
     setActiveSlide(parseInt(sessionStorage.currentSlide));
 
     //play(7000); // plays the slideshow at a rate of 7000ms per slide
-    play(10000);
+    play(3000);
 
   });
 
-  $(window).resize(function(){
-    debugger;
-    $(".bg-slider > *").height($(window).height());
+  jQuery(window).resize(function(){
+    jQuery(".bg-slider > *").height(jQuery(window).height());
   });
 
   var play = function(interval) {
@@ -52,7 +51,7 @@ var bgSlider = (function(){
 
   var nextSlide = function(){
 
-    var $elements = $(".bg-slider > *");
+    var $elements = jQuery(".bg-slider > *");
 
     var startIndex = 0;
 
@@ -73,9 +72,9 @@ var bgSlider = (function(){
 
   var setActiveSlide = function (index) {
     //Find the current active element
-    $(".bg-slider > .active").removeClass('active').addClass('hidden');
+    jQuery(".bg-slider > .slide-active").removeClass('slide-active').addClass('slide-hidden');
     //Make the target element active
-    $(".bg-slider > *").eq(index).addClass('active').removeClass('hidden');
+    jQuery(".bg-slider > *").eq(index).addClass('slide-active').removeClass('slide-hidden');
   };
 
   //Public properties goes here
